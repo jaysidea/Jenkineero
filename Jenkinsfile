@@ -13,7 +13,7 @@ pipeline {
     }
         stage('Pull') {
       steps {
-        sh '192.168.79.83:8080/pull'
+        sh 'curl -X POST http://192.168.79.83:8080/pull'
       }
     }
 
@@ -22,4 +22,5 @@ pipeline {
     REGISTRY = '192.168.78.110:5000'
     AGENT1 = '192.168.79.83:8080'
   }
+}
 }
