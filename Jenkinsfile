@@ -16,11 +16,5 @@ pipeline {
         sh 'curl -X POST http://192.168.79.83:8080/pull'
       }
     }
-
-  environment {
-    IMAGE_NAME = 'eero'
-    REGISTRY = '192.168.78.110:5000'
-    AGENT1 = '192.168.79.83:8080'
-  }
 }
 }
