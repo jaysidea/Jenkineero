@@ -3,12 +3,12 @@ pipeline {
   stages {
     stage('Build Image') {
       steps {
-        sh 'docker build -t localhost:5000/${IMAGE_NAME}:${BUILD_NUMBER} .'
+        sh 'docker build -t localhost:5000/eero .'
       }
     }
     stage('Push Image') {
       steps {
-        sh 'docker push localhost:5000/${IMAGE_NAME}:${BUILD_NUMBER}'
+        sh 'docker push localhost:5000/eero .'
       }
     }
         stage('Pull') {
